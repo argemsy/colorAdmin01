@@ -1,0 +1,25 @@
+.policy {
+	& .policy-icon {
+		float: left;
+		width: rem(50px);
+		font-size: rem(38px);
+		line-height: rem(50px);
+		color: lighten($black, 60%);
+		text-align: center;
+		
+		& + .policy-info {
+			margin-left: rem(65px);
+		}
+	}
+	& h4 {
+		margin: 0;
+		font-size: rem(16px);
+		line-height: rem(24px);
+		font-weight: 600;
+	}
+	& p {
+		font-size: rem(12px);
+		color: lighten($black, 30%);
+		margin: 0;
+	}
+}

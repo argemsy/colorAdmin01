@@ -1,0 +1,48 @@
+.section-title {
+	font-size: rem(20px);
+	font-weight: 600;
+	margin: rem(-5px) 0 rem(25px);
+	color: $dark;
+	
+	@include media-breakpoint-down(md) {
+		font-size: rem(16px);
+		margin-bottom: rem(15px);
+		line-height: $line-height-base;
+	}
+	
+	& small {
+		margin-left: rem(5px);
+		font-weight: 400;
+		font-size: rem(14px);
+		color: lighten($black, 50%);
+		
+		@include media-breakpoint-down(md) {
+			display: block;
+			margin-left: 0;
+			font-size: rem(12px);
+		}
+	}
+	& a.pull-right {
+		font-size: rem(12px);
+		font-weight: bold;
+		color: $dark;
+		border: 1px solid $gray-300;
+		padding: rem(8px) rem(15px);
+		line-height: rem(16px);
+		margin: rem(-7px) 0;
+		background: $white;
+		
+		@include border-radius($border-radius);
+		@include media-breakpoint-down(md) {
+			margin: rem(5px) 0;
+			padding: rem(5px) rem(10px);
+		}
+		
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			background: $white;
+			color: $dark;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.card {
+	& .note-editor {
+		&.note-frame {
+			border: none;
+			
+			& .note-toolbar {
+				padding: rem(5px) rem(10px) rem(10px) rem(15px);
+				background: $white;
+				
+				& .btn {
+					border-color: $gray-400;
+					min-height: rem(30px);
+				}
+			}
+			& .note-editing-area {
+				& .note-editable,
+				& .note-placeholder {
+					padding: rem(15px);
+				}
+			}
+		}
+	}
+}

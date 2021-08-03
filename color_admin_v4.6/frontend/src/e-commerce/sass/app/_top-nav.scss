@@ -1,0 +1,77 @@
+.top-nav {
+	background: darken($dark, 5%);
+	z-index: $top-nav-zindex;
+	position: relative;
+	
+	@include clearfix();
+	
+	& .navbar-collapse {
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+	}
+	& .nav {
+		list-style-type: none;
+		display: block;
+		padding-left: 0;
+		
+		@include media-breakpoint-up(md) {
+			float: left;
+		}
+		
+		&.navbar-right {
+			@include media-breakpoint-up(md) {
+				float: right;
+			}
+		}
+		& > li {
+			@include media-breakpoint-up(md) {
+				float: left;
+			}
+			& > a {
+				font-size: rem(12px);
+				line-height: rem(20px);
+				padding: rem(10px);
+				color: $white;
+				display: block;
+				text-decoration: none;
+				
+				@include transition(all .1s linear);
+				
+				&:hover,
+				&:focus {
+					background: none;
+					color: rgba($white, .5);
+				}
+			}
+		}
+	}
+	& .flag-img {
+		float: left;
+		margin: rem(4px) rem(10px) rem(4px) 0;
+		height: rem(12px);
+	}
+	& .dropdown-menu {
+		background: $dark;
+		margin-top: 0;
+		border: none;
+		
+		@include border-radius(0 0 $border-radius $border-radius);
+		
+		& .flag-img {
+			width: rem(20px);
+			margin-left: rem(-5px);
+		}
+		& > li {
+			& > a {
+				color: $white;
+				line-height: rem(20px);
+				
+				&:hover,
+				&:focus {
+					background: rgba($black, .25);
+				}
+			}
+		}
+	}
+}
